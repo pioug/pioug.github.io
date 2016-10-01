@@ -1,0 +1,129 @@
+/**
+ * Site header
+ */
+$site-header-height: 70px;
+
+.site-header {
+  min-height: $site-header-height;
+
+  // Positioning context for the mobile navigation icon
+  position: relative;
+}
+
+.site-title.site-title {
+  color: #00BFA5;
+  float: left;
+  font-size: 26px;
+  font-weight: 300;
+  letter-spacing: -1px;
+  line-height: $site-header-height;
+  margin-bottom: 0;
+}
+
+.site-nav {
+  float: right;
+  line-height: $site-header-height;
+}
+
+.page-link {
+  display: inline-block;
+  height: 28px;
+  line-height: 0;
+  transition: fill ease-in-out 100ms;
+  vertical-align: middle;
+  width: 28px;
+
+  // Gaps between nav items, but not on the last one
+  &:not(:last-child) {
+    margin-right: 20px;
+  }
+
+  &:hover {
+    fill: $grey-color-dark;
+  }
+}
+
+.profile {
+  margin-bottom: $spacing-unit;
+  padding-bottom: $spacing-unit;
+  text-align: center;
+
+  h1 {
+    font-weight: 700;
+    margin: 0;
+    letter-spacing: -1px;
+  }
+
+  h2 {
+    color: $grey-color;
+    letter-spacing: -1px;
+  }
+}
+
+.profile-avatar {
+  border-radius: 50%;
+  margin-bottom: $spacing-unit / 2;
+  height: 100px;
+}
+
+/**
+ * Page content
+ */
+.page-content {
+  padding: $spacing-unit * 2 0;
+}
+
+.page-heading {
+  font-size: 20px;
+}
+
+.post-preview {
+  border-bottom: 1px solid $grey-color-light;
+  padding-bottom: $spacing-unit;
+
+  h2 {
+    margin: 0;
+  }
+}
+
+.post-preview + .post-preview {
+  margin-top: $spacing-unit;
+}
+
+.post-meta {
+  color: $grey-color;
+  font-size: $small-font-size;
+  margin-left: 2px;
+}
+
+.post-link {
+  font-weight: 700;
+}
+
+/**
+ * Posts
+ */
+.post-header {
+  margin-bottom: $spacing-unit;
+}
+
+.post-title {
+  font-weight: 700;
+  margin-bottom: 0;
+}
+
+.post-content {
+  margin-bottom: $spacing-unit;
+
+  h2 {
+    font-size: 32px;
+  }
+
+  h3 {
+    font-size: 26px;
+  }
+
+  h4 {
+    font-size: 20px;
+  }
+}

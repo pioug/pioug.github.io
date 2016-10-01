@@ -1,140 +1,18 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="author" content="Gilles PIOU">
-  <meta name="description" content="Seeking attention on Google">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <title>Gilles Piou</title>
-  <link rel="canonical" href="https://pioug.github.io">
-  <link rel="author" href="https://plus.google.com/+GillesPiou">
-  <style type="text/css">
-    body {
-      color: rgba(0,0,0,0.8);
-      font-family: 'Helvetica Neue', Arial, sans-serif;
-      margin: 0;
-      pointer-events: none;
-      text-rendering: optimizeLegibility;
-    }
+---
+layout: default
+---
 
-    aside {
-      background-image: url(ben-thanh.jpg);
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: cover;
-      bottom: 0;
-      left: 0;
-      position: fixed;
-      right: 0;
-      top: 0;
-    }
+<div class="profile">
+  <amp-img class="profile-avatar" src="assets/avatar.jpg" height="100" width="100"></amp-img>
+  <h1>Gilles Piou</h1>
+  <h2>Front-end developer at <a href="https://www.bandlab.com">BandLab</a></h2>
+</div>
 
-    section {
-      background-color: rgba(255, 255, 255, .6);
-      border-radius: 4px;
-      display: inline-block;
-      margin: 1em 0 0 1em;
-      padding: 2em;
-      position: fixed;
-    }
-
-    header a {
-      background: #222;
-      border-radius: 2px;
-      color: #fff;
-      line-height: 2em;
-      padding: .2em .4em;
-    }
-
-    h1 {
-      font-weight: 800;
-      line-height: 1em;
-      margin: 0;
-    }
-
-    h2 {
-      color: #FF1744;
-      font-size: 1.2em;
-      font-weight: 400;
-      letter-spacing: .02em;
-      line-height: 2em;
-      margin: 0;
-    }
-
-    a {
-      color: inherit;
-      pointer-events: all;
-      text-decoration: none;
-      transition: all .2s cubic-bezier(0.250, 0.460, 0.450, 0.940);
-    }
-
-    p {
-      margin-bottom: 0;
-    }
-
-    header a:hover {
-      background: #777;
-    }
-
-    p a {
-      line-height: 2em;
-      margin-left: 1em;
-    }
-
-    p a:hover {
-      color: #777;
-      padding-left: .6em;
-    }
-
-    @media (pointer: coarse) {
-
-      header a:hover {
-        background: #222;
-      }
-
-      p a:hover {
-        color: #222;
-        padding-left: 0;
-      }
-
-    }
-  </style>
-</head>
-<body>
-  <aside></aside>
-  <section>
-    <header>
-      <h1>Gilles Piou</h1>
-      <h2>Front-end developer</h2>
-      <a href="mailto:gilles.piou@gmail.com">email</a>
-      <a href="resume.html">resume</a>
-    </header>
-    <p>
-      <a target="_blank" href="http://www.facebook.com/pioug">facebook</a><br>
-      <a target="_blank" href="http://www.github.com/pioug">github</a><br>
-      <a target="_blank" href="http://www.linkedin.com/in/pioug">linkedin</a><br>
-      <a target="_blank" href="http://www.twitter.com/pioug">twitter</a><br>
-      <a target="_blank" href="http://pioug.vsco.co/">vsco</a>
-    </p>
-  </section>
-  <script>
-    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-    ga('create', 'UA-40932161-1', 'auto');
-    ga('send', 'pageview');
-
-  </script>
-  <script type="text/javascript">
-  (function() {
-    document.addEventListener('click', function(event) {
-      if (event.target.nodeName === 'A') {
-        _gaq.push('send', 'event', 'link', 'click', event.target.innerText);
-      }
-    });
-  })();
-  </script>
-</body>
-</html>
+<div class="home">
+  {% for post in site.posts %}
+  <div class="post-preview">
+    <div><span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span></div>
+    <h2><a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h2>
+  </div>
+  {% endfor %}
+</div>

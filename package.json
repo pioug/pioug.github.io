@@ -1,0 +1,17 @@
+{
+  "name": "blog",
+  "version": "1.0.0",
+  "description": "Generate static pages with Jekyll and bundle with Gulp plugins",
+  "main": "gulpfile.js",
+  "author": "Gilles Piou",
+  "license": "MIT",
+  "scripts": {
+    "deploy": "jekyll build && gulp && rsync -r --delete-after _site/ root@piou.io:/root/dev/full-stack-containers/app"
+  },
+  "devDependencies": {
+    "gulp": "3.9.0",
+    "gulp-cssnano": "2.1.0",
+    "gulp-htmlmin": "1.3.0",
+    "gulp-imagemin": "2.4.0"
+  }
+}
