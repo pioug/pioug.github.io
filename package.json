@@ -1,0 +1,9 @@
+{
+  "name": "piou.io",
+  "scripts": {
+    "deploy": "firebase deploy --only hosting"
+  },
+  "dependencies": {
+    "firebase-tools": "3.9.1"
+  }
+}
